@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YouTube to MP Downloader</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/home.css') }}">
+  </head>
+  <body>
+    <h1>YouTube Downloader</h1>
+    <form method="post" action="{{ url_for('download') }}">
+      <label for="video_url">Enter YouTube Video Link:</label>
+      <input type="text" name="video_url" id="video_url" required>
+      <button type="submit" name="format" value="mp3">Download MP3</button>
+      <button type="submit" name="format" value="mp4">Download MP4</button>
+    </form>
+    <form method="post" action="{{ url_for('clear_downloads') }}">
+      <h2>MAKE SURE TO CLEAR BEFORE CLOSING</h2>
+      <button type="submit">Clear Downloads!!!</button>
+    </form>
+  </body>
+</html>
